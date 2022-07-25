@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+  />
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="Choices-master/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
@@ -44,49 +48,65 @@
       <div class="container flex">
         <ul class="header__list list-reset flex">
           <li class="header__item">
-            <button class="header__list-btn btn-reset">Реализм</button>
-            <ul class="header__list-inside list-reset flex">
-              <li class="header__item-inside header__item-inside--bg-1-1">Тинторетто</li>
-              <li class="header__item-inside header__item-inside--bg-1-2">Фридрих</li>
-              <li class="header__item-inside header__item-inside--bg-1-3">Леонардо</li>
-              <li class="header__item-inside header__item-inside--bg-1-4">Верроккьо</li>
-            </ul>
+            <button class="header__list-btn btn-reset header__list-btn--1">Реализм</button>
+            <div class="header__inside header__inside--1">
+              <ul class="header__list-inside list-reset" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-max-size="28" data-simplebar-force-visible-y="true">
+                <li class="header__item-inside header__item-inside--bg-1-1">Тинторетто</li>
+                <li class="header__item-inside header__item-inside--bg-1-2">Фридрих</li>
+                <li class="header__item-inside header__item-inside--bg-1-3">Леонардо</li>
+                <li class="header__item-inside header__item-inside--bg-1-4">Верроккьо</li>
+                <li class="header__item-inside header__item-inside--bg-1-4">Верроккьо</li>
+                <li class="header__item-inside header__item-inside--bg-1-1">Тинторетто</li>
+              </ul>
+            </div>
           </li>
           <li class="header__item">
-            <button class="header__list-btn btn-reset">Импрессионизм</button>
-            <ul class="header__list-inside list-reset flex">
-              <li class="header__item-inside header__item-inside--bg-2-1">Моне</li>
-              <li class="header__item-inside header__item-inside--bg-2-2">Сислей</li>
-              <li class="header__item-inside header__item-inside--bg-2-3">Мане</li>
-              <li class="header__item-inside header__item-inside--bg-2-4">Ренуар</li>
-            </ul>
+            <button class="header__list-btn btn-reset header__list-btn--2">Импрессионизм</button>
+            <div class="header__inside header__inside--2">
+              <ul class="header__list-inside list-reset" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-max-size="28" data-simplebar-force-visible-y="true">
+                  <li class="header__item-inside header__item-inside--bg-2-1">Моне</li>
+                  <li class="header__item-inside header__item-inside--bg-2-2">Сислей</li>
+                  <li class="header__item-inside header__item-inside--bg-2-3">Мане</li>
+                  <li class="header__item-inside header__item-inside--bg-2-4">Ренуар</li>
+                  <li class="header__item-inside header__item-inside--bg-2-1">Моне</li>
+              </ul>
+            </div>
           </li>
           <li class="header__item">
-            <button class="header__list-btn btn-reset">Постимпрессионизм</button>
-            <ul class="header__list-inside list-reset flex">
-              <li class="header__item-inside header__item-inside--bg-3-1">Ван Гог</li>
-              <li class="header__item-inside header__item-inside--bg-3-2">Сезанн</li>
-              <li class="header__item-inside header__item-inside--bg-3-3">Гоген</li>
-              <li class="header__item-inside header__item-inside--bg-3-4">Сёра</li>
-            </ul>
+            <button class="header__list-btn btn-reset header__list-btn--3">Постимпрессионизм</button>
+            <div class="header__inside header__inside--3">
+              <ul class="header__list-inside list-reset" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-max-size="28" data-simplebar-force-visible-y="true">
+                <li class="header__item-inside header__item-inside--bg-3-1">Ван Гог</li>
+                <li class="header__item-inside header__item-inside--bg-3-2">Сезанн</li>
+                <li class="header__item-inside header__item-inside--bg-3-3">Гоген</li>
+                <li class="header__item-inside header__item-inside--bg-3-4">Сёра</li>
+                <li class="header__item-inside header__item-inside--bg-3-1">Ван Гог</li>
+              </ul>
+            </div>
           </li>
           <li class="header__item">
-            <button class="header__list-btn btn-reset">Авангард</button>
-            <ul class="header__list-inside list-reset flex">
-              <li class="header__item-inside header__item-inside--bg-4-1">Кандинский</li>
-              <li class="header__item-inside header__item-inside--bg-4-2">Маринетти</li>
-              <li class="header__item-inside header__item-inside--bg-4-3">Малевич</li>
-              <li class="header__item-inside header__item-inside--bg-4-4">Пикассо</li>
-            </ul>
+            <button class="header__list-btn btn-reset header__list-btn--4">Авангард</button>
+            <div class="header__inside header__inside--4">
+            <ul class="header__list-inside list-reset" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-max-size="28" data-simplebar-force-visible-y="true">
+                <li class="header__item-inside header__item-inside--bg-4-1">Кандинский</li>
+                <li class="header__item-inside header__item-inside--bg-4-2">Маринетти</li>
+                <li class="header__item-inside header__item-inside--bg-4-3">Малевич</li>
+                <li class="header__item-inside header__item-inside--bg-4-4">Пикассо</li>
+                <li class="header__item-inside header__item-inside--bg-4-1">Кандинский</li>
+              </ul>
+            </div>
           </li>
           <li class="header__item">
-            <button class="header__list-btn btn-reset">Футуризм</button>
-            <ul class="header__list-inside list-reset flex">
-              <li class="header__item-inside header__item-inside--bg-5-1">Карра</li>
-              <li class="header__item-inside header__item-inside--bg-5-2">Прателла</li>
-              <li class="header__item-inside header__item-inside--bg-5-3">Северини</li>
-              <li class="header__item-inside header__item-inside--bg-5-4">Балла</li>
-            </ul>
+            <button class="header__list-btn btn-reset header__list-btn--5">Футуризм</button>
+            <div class="header__inside header__inside--5">
+              <ul class="header__list-inside list-reset" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-max-size="28" data-simplebar-force-visible-y="true">
+                <li class="header__item-inside header__item-inside--bg-5-1">Карра</li>
+                <li class="header__item-inside header__item-inside--bg-5-2">Прателла</li>
+                <li class="header__item-inside header__item-inside--bg-5-3">Северини</li>
+                <li class="header__item-inside header__item-inside--bg-5-4">Балла</li>
+                <li class="header__item-inside header__item-inside--bg-5-1">Карра</li>
+              </ul>
+            </div>
           </li>
         </ul>
         <div class="header__search">
@@ -271,7 +291,7 @@
 
             <div class="ac">
               <h2 class="ac-header">
-                <button type="button" class="ac-trigger">C 2000 г</button>
+                <button type="button" class="ac-trigger">C 2000 г</button>
               </h2>
               <div class="ac-panel">
                 <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -495,6 +515,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="Choices-master/public/assets/scripts/choices.min.js"></script>
   <script src="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.js"></script>

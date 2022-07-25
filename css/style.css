@@ -87,6 +87,10 @@ body {
   --color-element: #9d5cd0;
 }
 
+.is__active {
+  display: block !important;
+}
+
 /* header */
 .header {
   position: relative;
@@ -209,14 +213,14 @@ align-items: center;
   transform: rotate(135deg);
 }
 
-.header__list-inside {
+.header__inside {
+  display: none;
   position: absolute;
-  top: 51px;
+  top: 50px;
   flex-direction: column;
   width: 300px;
   height: 300px;
   padding: 40px;
-  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -314,6 +318,37 @@ align-items: center;
 .header__item-inside--bg-5-4 {
   background-image: url(../img/bg-list-5-4.jpg);
 }
+
+.header__list-inside {
+  height: 220px;
+  overflow-x: none;
+}
+
+.simplebar-scrollbar::before {
+  width: 2px;
+  background-color: #fff;
+}
+.simplebar-offset {
+  padding-bottom: 0;
+}
+
+.simplebar-track {
+  /* position: absolute; */
+  right: -19px;
+  background-color: #000;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 2px;
+}
+
+.simplebar-scrollbar.simplebar-visible {
+  background-color: #fff;
+}
+
+/* .simplebar-offset {
+  padding: 40px 0;
+} */
 
 /* hero */
 .hero {
