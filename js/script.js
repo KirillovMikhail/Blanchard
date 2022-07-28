@@ -1,18 +1,43 @@
 let headerListBtn1 = document.querySelector('.header__list-btn--1');
 let headerListInside1 = document.querySelector('.header__inside--1');
+let headerItemInside = document.querySelectorAll('.header__item-inside ')
+let headerListInside = document.querySelectorAll('.header__inside');
+let headerListBtn = document.querySelectorAll('.header__list-btn');
 
-// headerListBtn.forEach(function(btn) {
+//  headerListBtn.forEach(function(btn) {
+//    btn.addEventListener('click',
+//    function () {
+//    headerListInside.forEach(function (item) {
+//     item.classList.remove('is__active');
+//   });
+//    });
+//   });
+
+
   headerListBtn1 .addEventListener('click',
   function () {
+    //headerListInside.forEach(function (item) {
+    //  item.classList.remove('is__active');
+    //});
+    headerListInside2.classList.remove('is__active');
+    headerListInside3.classList.remove('is__active');
+    headerListInside4.classList.remove('is__active');
+    headerListInside5.classList.remove('is__active');
     headerListInside1.classList.toggle('is__active');
     });
-// });
+
+
+
 
 let headerListBtn2 = document.querySelector('.header__list-btn--2');
 let headerListInside2 = document.querySelector('.header__inside--2');
 
   headerListBtn2 .addEventListener('click',
   function () {
+    headerListInside1.classList.remove('is__active');
+    headerListInside3.classList.remove('is__active');
+    headerListInside4.classList.remove('is__active');
+    headerListInside5.classList.remove('is__active');
     headerListInside2.classList.toggle('is__active');
     });
 
@@ -21,6 +46,10 @@ let headerListInside3 = document.querySelector('.header__inside--3');
 
   headerListBtn3 .addEventListener('click',
   function () {
+    headerListInside1.classList.remove('is__active');
+    headerListInside2.classList.remove('is__active');
+    headerListInside4.classList.remove('is__active');
+    headerListInside5.classList.remove('is__active');
     headerListInside3.classList.toggle('is__active');
     });
 
@@ -29,6 +58,10 @@ let headerListInside4 = document.querySelector('.header__inside--4');
 
   headerListBtn4 .addEventListener('click',
   function () {
+    headerListInside1.classList.remove('is__active');
+    headerListInside2.classList.remove('is__active');
+    headerListInside3.classList.remove('is__active');
+    headerListInside5.classList.remove('is__active');
     headerListInside4.classList.toggle('is__active');
     });
 
@@ -37,6 +70,10 @@ let headerListInside5 = document.querySelector('.header__inside--5');
 
   headerListBtn5 .addEventListener('click',
   function () {
+    headerListInside1.classList.remove('is__active');
+    headerListInside2.classList.remove('is__active');
+    headerListInside3.classList.remove('is__active');
+    headerListInside4.classList.remove('is__active');
     headerListInside5.classList.toggle('is__active');
     });
 
@@ -45,6 +82,16 @@ let headerListInside5 = document.querySelector('.header__inside--5');
 //   scrollbarMaxSize: 70,
 //   forceVisible: true,
 // });
+
+headerItemInside.forEach(function(el) {
+  el.addEventListener('click', function () {
+    headerListInside.forEach(function(element) {
+      element.classList.remove('is__active');
+  })
+})
+});
+
+
 
 
 
@@ -61,14 +108,20 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   slidesPerGroup: 3,
-  slidesPerGroupAuto: true,
+  preloadImages: false,
+  updateOnImagesReady: false,
+
+  // slideToClickedSlide: true,
+
+
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-  },
+    type: 'fraction',
+},
 
   // Navigation arrows
   navigation: {
@@ -76,14 +129,34 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
+// swiper.updateSlides();
 
 new Accordion('.accordion-container', {
   duration: 1000,
+});
+
+let galerySlider = document.querySelector('.swiper-slide--2');
+let galeryModal = document.querySelector('.modal');
+
+galerySlider .addEventListener('click',
+  function () {
+    galeryModal.classList.toggle('is__active');
+    });
+
+    // catalog
+let tabsBtn = document.querySelectorAll('.gallery__ac-link');
+let tabsItem = document.querySelectorAll('.gallery__cards');
+tabsBtn.forEach(function(element){
+    element.addEventListener('click', function(e) {
+        const path=e.currentTarget.dataset.path;
+
+          // tabsBtn.forEach(function(btn) {btn.classList.remove('works__tabs--active')});
+          // e.currentTarget.classList.add('works__tabs--active');
+
+          tabsItem.forEach(function(element){element.classList.remove('gallery__cards--active')});
+          document.querySelector(`[data-target="${path}"]`).classList.add('gallery__cards--active');
+    });
 });
 
 const eventsSwiper = new Swiper('.events__swiper', {
@@ -121,6 +194,7 @@ const projectsSwiper = new Swiper('.project__swiper', {
   },
 
 });
+
 
 const validation = new JustValidate('#form');
 
@@ -164,5 +238,7 @@ validation
      });
      myMap.geoObjects.add(placemark);
     }
+
+
 
 
