@@ -103,7 +103,7 @@ const choices = new Choices(element, {
    position: 'bottom',
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.gallery__swipper', {
   // Optional parameters
   slidesPerView: 3,
   spaceBetween: 50,
@@ -130,7 +130,8 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
-// swiper.updateSlides();
+
+//swiper.updateSlides();
 
 new Accordion('.accordion-container', {
   duration: 1000,
@@ -145,7 +146,7 @@ galerySlider .addEventListener('click',
     });
 
     // catalog
-let tabsBtn = document.querySelectorAll('.gallery__ac-link');
+let tabsBtn = document.querySelectorAll('.gallery__ac-item');
 let tabsItem = document.querySelectorAll('.gallery__cards');
 tabsBtn.forEach(function(element){
     element.addEventListener('click', function(e) {
