@@ -100,7 +100,7 @@ const choices = new Choices(element, {
    searchEnabled: false,
    shouldSort: false,
    itemSelectText: '',
-   position: 'bottom',
+   silent: true,
 });
 
 const swiper = new Swiper('.gallery__swipper', {
@@ -108,7 +108,7 @@ const swiper = new Swiper('.gallery__swipper', {
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
-  loop: true,
+
   slidesPerGroup: 3,
   preloadImages: false,
   updateOnImagesReady: false,
@@ -178,14 +178,39 @@ const eventsSwiper = new Swiper('.events__swiper', {
 
 });
 
+// tippy('.project__tooltip', {
+//     content: 'Глава 2, страница 176',
+//   maxWidth: 264,
+//   hideOnClick: false,
+//   trigger: 'click',
+// });
+
+tippy('.project__tooltip--1', {
+  maxWidth: 264,
+  content: 'Пример современных тенденций — современная методология разработки',
+});
+
+tippy('.project__tooltip--2', {
+  maxWidth: 264,
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+});
+
+tippy('.project__tooltip--3', {
+  maxWidth: 264,
+  content: 'В стремлении повысить качество',
+});
+
 const projectsSwiper = new Swiper('.project__swiper', {
   // Optional parameters
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
-  loop: true,
+  watchSlidesProgress: true,
   slidesPerGroup: 3,
-  slidesPerGroupAuto: true,
+  loop: true,
+  // slidesPerView: 3,
+
+
 
 
   // Navigation arrows
