@@ -91,6 +91,14 @@ headerItemInside.forEach(function(el) {
 })
 });
 
+const swiperHero = new Swiper('.hero__swipper', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+});
+
 
 
 
@@ -233,20 +241,37 @@ validation
     {
       rule: 'minLength',
       value: 3,
+      errorMessage: 'Имя слишком короткое',
     },
     {
       rule: 'maxLength',
       value: 30,
+      errorMessage: 'Имя слишком длинное',
+    },
+    {
+    rule: 'customRegexp',
+    value: /^[А-ЯЁ]+$/i,
+    errorMessage: 'Недопустимый формат'
     },
   ])
   .addField('#tel', [
     {
       rule: 'required',
-      errorMessage: 'Email is required',
+      errorMessage: 'Введите телефон',
     },
     {
-      rule: 'email',
-      errorMessage: 'Email is invalid!',
+      rule: 'number',
+      errorMessage: 'Недопустимый формат',
+    },
+    {
+      rule: 'minLength',
+      value: 10,
+      errorMessage: 'Номер слишком короткий',
+    },
+    {
+      rule: 'maxLength',
+      value: 11,
+      errorMessage: 'Номер слишком длиный',
     },
   ]);
 
@@ -256,7 +281,34 @@ validation
         center: [55.759478, 37.615455],
         zoom: 14,
         controls: ['zoomControl'],
+
+
+
     });
+
+
+    // myMap.control.ZoomControl.parameters.options.position.left(200)
+
+    var geolocationControl = new ymaps.control.GeolocationControl({
+      options: {noPlacemark: true}
+  });
+  geolocationControl.events.add('locationchange', function (event) {
+      var position = event.get('position'),
+      // При создании метки можно задать ей любой внешний вид.
+          locationPlacemark = new ymaps.Placemark(position);
+
+      myMap.geoObjects.add(locationPlacemark);
+      // Установим новый центр карты в текущее местоположение пользователя.
+      myMap.panTo(position);
+  });
+
+  myMap.controls.add(geolocationControl);
+
+
+// zoomControl = new ymaps.control.ZoomControl({options: {position: {right: 20}]}});
+
+
+
     var placemark = new ymaps.Placemark([55.759478, 37.615455], {},  {
       iconLayout: 'default#image',
       iconImageHref: 'img/map-point.svg',
