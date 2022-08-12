@@ -26,12 +26,8 @@ let headerListBtn = document.querySelectorAll('.header__list-btn');
     headerListInside1.classList.toggle('is__active');
     });
 
-
-
-
 let headerListBtn2 = document.querySelector('.header__list-btn--2');
 let headerListInside2 = document.querySelector('.header__inside--2');
-
   headerListBtn2 .addEventListener('click',
   function () {
     headerListInside1.classList.remove('is__active');
@@ -77,12 +73,6 @@ let headerListInside5 = document.querySelector('.header__inside--5');
     headerListInside5.classList.toggle('is__active');
     });
 
-// new SimpleBar(document.getElementById('header__list-inside'), {
-//   autoHide: false,
-//   scrollbarMaxSize: 70,
-//   forceVisible: true,
-// });
-
 headerItemInside.forEach(function(el) {
   el.addEventListener('click', function () {
     headerListInside.forEach(function(element) {
@@ -99,10 +89,6 @@ const swiperHero = new Swiper('.hero__swipper', {
   },
 });
 
-
-
-
-
 const element = document.querySelector('.select');
 const choices = new Choices(element, {
    searchEnabled: false,
@@ -112,34 +98,24 @@ const choices = new Choices(element, {
 });
 
 const swiper = new Swiper('.gallery__swipper', {
-  // Optional parameters
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
-
   slidesPerGroup: 3,
   preloadImages: false,
   updateOnImagesReady: false,
 
-  // slideToClickedSlide: true,
-
-
-
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
 },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
 });
-
-//swiper.updateSlides();
 
 new Accordion('.accordion-container', {
   duration: 1000,
@@ -153,45 +129,28 @@ galerySlider .addEventListener('click',
     galeryModal.classList.toggle('is__active');
     });
 
-    // catalog
 let tabsBtn = document.querySelectorAll('.gallery__ac-item');
 let tabsItem = document.querySelectorAll('.gallery__cards');
 tabsBtn.forEach(function(element){
     element.addEventListener('click', function(e) {
         const path=e.currentTarget.dataset.path;
-
-          // tabsBtn.forEach(function(btn) {btn.classList.remove('works__tabs--active')});
-          // e.currentTarget.classList.add('works__tabs--active');
-
           tabsItem.forEach(function(element){element.classList.remove('gallery__cards--active')});
           document.querySelector(`[data-target="${path}"]`).classList.add('gallery__cards--active');
     });
 });
 
 const eventsSwiper = new Swiper('.events__swiper', {
-  // Optional parameters
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
   loop: false,
-  // slidesPerGroup: 3,
-  // slidesPerGroupAuto: true,
 
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
 });
-
-// tippy('.project__tooltip', {
-//     content: 'Глава 2, страница 176',
-//   maxWidth: 264,
-//   hideOnClick: false,
-//   trigger: 'click',
-// });
 
 tippy('.project__tooltip--1', {
   maxWidth: 264,
@@ -209,26 +168,19 @@ tippy('.project__tooltip--3', {
 });
 
 const projectsSwiper = new Swiper('.project__swiper', {
-  // Optional parameters
   slidesPerView: 3,
   spaceBetween: 50,
   direction: 'horizontal',
   watchSlidesProgress: true,
   slidesPerGroup: 3,
   loop: true,
-  // slidesPerView: 3,
 
-
-
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
 });
-
 
 const validation = new JustValidate('#form');
 
@@ -281,13 +233,7 @@ validation
         center: [55.759478, 37.615455],
         zoom: 14,
         controls: ['zoomControl'],
-
-
-
     });
-
-
-    // myMap.control.ZoomControl.parameters.options.position.left(200)
 
     var geolocationControl = new ymaps.control.GeolocationControl({
       options: {noPlacemark: true}
@@ -304,11 +250,7 @@ validation
 
   myMap.controls.add(geolocationControl);
 
-
 // zoomControl = new ymaps.control.ZoomControl({options: {position: {right: 20}]}});
-
-
-
     var placemark = new ymaps.Placemark([55.759478, 37.615455], {},  {
       iconLayout: 'default#image',
       iconImageHref: 'img/map-point.svg',
@@ -316,7 +258,3 @@ validation
      });
      myMap.geoObjects.add(placemark);
     }
-
-
-
-
