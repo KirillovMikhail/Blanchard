@@ -167,70 +167,68 @@
       </div>
     </section>
     <section class="section gallery" id="gallery">
-      <div class="container gallery__container">
-        <h2 class="gallery__header section__header">Галерея</h2>
-        <div class="gallery__wrapper flex">
-          <div class="gallery__filter flex">
-            <label class="gallery__label gallery__label--select">Фильтр:
-              <select class="select gallery__select" name="select">
-                <option value="">Живопись</option>
-                <option value="">Рисунок</option>
-                <option value="">Скульптура</option>
-              </select>
-            </label>
-            <label class="gallery__label" tabindex="1">
-              <input class="gallery__input input" type="radio" name="filter">XIX век
-              <span class="gallery__check input__check"></span>
-            </label>
-            <label class="gallery__label" tabindex="1">
-              <input class="gallery__input input" type="radio" checked name="filter">XX век
-              <span class="gallery__check input__check"></span>
-            </label>
-            <label class="gallery__label" tabindex="1">
-              <input class="gallery__input input" type="radio" name="filter">Современность
-              <span class="gallery__check input__check"></span>
-            </label>
+      <div class="container gallery__container flex">
+        <div class="gallery__filter flex">
+          <h2 class="gallery__header section__header">Галерея</h2>
+          <label class="gallery__label-select">Фильтр:
+            <select class="select gallery__select" name="select">
+              <option value="">Живопись</option>
+              <option value="">Рисунок</option>
+              <option value="">Скульптура</option>
+            </select>
+          </label>
+          <label class="gallery__label" tabindex="1">
+            <input class="gallery__input input" type="radio" name="filter">XIX век
+            <span class="gallery__check input__check"></span>
+          </label>
+          <label class="gallery__label" tabindex="1">
+            <input class="gallery__input input" type="radio" checked name="filter">XX век
+            <span class="gallery__check input__check"></span>
+          </label>
+          <label class="gallery__label" tabindex="1">
+            <input class="gallery__input input" type="radio" name="filter">Современность
+            <span class="gallery__check input__check"></span>
+          </label>
+        </div>
+        <div class="swiper gallery__swipper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide gallery__swiper-slide" tabindex="1">
+              <img class="gallery__painting" src="img/gallery-1.jpg" alt="Картина известного художника 1">
+            </div>
+            <div class="swiper-slide gallery__swiper-slide swiper-slide--2" tabindex="1">
+              <img class="gallery__painting" src="img/gallery-2.jpg" alt="Картина известного художника 2">
+            </div>
+            <div class="swiper-slide gallery__swiper-slide" tabindex="1">
+              <img class="gallery__painting" src="img/gallery-3.jpg" alt="Картина известного художника 3">
+            </div>
+            <div class="swiper-slide gallery__swiper-slide">
+              <img class="gallery__painting" src="img/gallery-4.jpg" alt="Картина известного художника 4">
+            </div>
+            <div class="swiper-slide gallery__swiper-slide">
+              <img class="gallery__painting" src="img/gallery-5.jpg" alt="Картина известного художника 5">
+            </div>
+            <div class="swiper-slide gallery__swiper-slide">
+              <img class="gallery__painting" src="img/gallery-6.jpg" alt="Картина известного художника 6">
+            </div>
           </div>
-          <div class="swiper gallery__swipper">
-            <div class="swiper-wrapper gallery__wrapper">
-              <div class="swiper-slide gallery__swiper-slide" tabindex="1">
-                <img class="gallery__painting" src="img/gallery-1.jpg" alt="Картина известного художника 1">
-              </div>
-              <div class="swiper-slide gallery__swiper-slide swiper-slide--2" tabindex="1">
-                <img class="gallery__painting" src="img/gallery-2.jpg" alt="Картина известного художника 2">
-              </div>
-              <div class="swiper-slide gallery__swiper-slide" tabindex="1">
-                <img class="gallery__painting" src="img/gallery-3.jpg" alt="Картина известного художника 3">
-              </div>
-              <div class="swiper-slide gallery__swiper-slide">
-                <img class="gallery__painting" src="img/gallery-4.jpg" alt="Картина известного художника 4">
-              </div>
-              <div class="swiper-slide gallery__swiper-slide">
-                <img class="gallery__painting" src="img/gallery-5.jpg" alt="Картина известного художника 5">
-              </div>
-              <div class="swiper-slide gallery__swiper-slide">
-                <img class="gallery__painting" src="img/gallery-6.jpg" alt="Картина известного художника 6">
-              </div>
-            </div>
-            <div class="swiper-pagination gallery-swiper-pagination"></div>
-            <div class="swiper-button-prev gallery__swiper-button-prev">
-              <svg class="gallery__btn" width="30" height="30" viewBox="0 0 30 30" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
-                  fill="" stroke="" stroke-width="2" />
-                <path class="gallery__pointer" d="M14 20L19 15L14 10" stroke="" />
-              </svg>
-            </div>
-            <div class="swiper-button-next gallery-swiper-button-next">
-              <svg class="gallery__btn" width="30" height="30" viewBox="0 0 30 30" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
-                  fill="" stroke="" stroke-width="2" />
-                <path class="gallery__pointer" d="M14 20L19 15L14 10" stroke="" />
-              </svg>
-            </div>
+          <div class="swiper-pagination gallery-swiper-pagination"></div>
+          <div class="swiper-button-prev gallery__swiper-button-prev">
+            <svg class="gallery__btn" width="30" height="30" viewBox="0 0 30 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                fill="" stroke="" stroke-width="2" />
+              <path class="gallery__pointer" d="M14 20L19 15L14 10" stroke="" />
+            </svg>
+          </div>
+          <div class="swiper-button-next gallery-swiper-button-next">
+            <svg class="gallery__btn" width="30" height="30" viewBox="0 0 30 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 29C22.732 29 29 22.732 29 15C29 7.26801 22.732 0.999999 15 0.999999C7.26801 1 1 7.26801 1 15C1 22.732 7.26801 29 15 29Z"
+                fill="" stroke="" stroke-width="2" />
+              <path class="gallery__pointer" d="M14 20L19 15L14 10" stroke="" />
+            </svg>
           </div>
         </div>
         <!-- <div class="modal flex">
