@@ -124,18 +124,18 @@ new Accordion('.accordion-container', {
 let galerySlider = document.querySelector('.swiper-slide--2');
 let galeryModal = document.querySelector('.modal');
 
-galerySlider .addEventListener('click',
-  function () {
-    galeryModal.classList.toggle('is__active');
-    });
+// galerySlider .addEventListener('click',
+//   function () {
+//     galeryModal.classList.toggle('is__active');
+//     });
 
-let tabsBtn = document.querySelectorAll('.gallery__ac-item');
-let tabsItem = document.querySelectorAll('.gallery__cards');
+let tabsBtn = document.querySelectorAll('.catalog__ac-item');
+let tabsItem = document.querySelectorAll('.catalog__cards');
 tabsBtn.forEach(function(element){
     element.addEventListener('click', function(e) {
         const path=e.currentTarget.dataset.path;
-          tabsItem.forEach(function(element){element.classList.remove('gallery__cards--active')});
-          document.querySelector(`[data-target="${path}"]`).classList.add('gallery__cards--active');
+          tabsItem.forEach(function(element){element.classList.remove('catalog__cards--active')});
+          document.querySelector(`[data-target="${path}"]`).classList.add('catalog__cards--active');
     });
 });
 
