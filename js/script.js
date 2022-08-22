@@ -84,9 +84,9 @@ headerItemInside.forEach(function(el) {
 const swiperHero = new Swiper('.hero__swipper', {
   direction: 'horizontal',
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 });
 
 const element = document.querySelector('.select');
@@ -114,6 +114,29 @@ const swiper = new Swiper('.gallery__swipper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+
+    // 320: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20
+    // },
+
+    // 480: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30
+    // },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    1920: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    }
+  }
 
 });
 
@@ -145,10 +168,37 @@ const eventsSwiper = new Swiper('.events__swiper', {
   direction: 'horizontal',
   loop: false,
 
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+
+    // 320: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20
+    // },
+
+    // 480: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30
+    // },
+
+    1024: {
+      spaceBetween: 27,
+      slidesPerGroup: 3,
+    },
+
+    1920: {
+      spaceBetween: 50,
+    }
+  }
 
 });
 
@@ -174,6 +224,29 @@ const projectsSwiper = new Swiper('.project__swiper', {
   watchSlidesProgress: true,
   slidesPerGroup: 3,
   loop: true,
+
+  breakpoints: {
+
+    // 320: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20
+    // },
+
+    // 480: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30
+    // },
+
+    1024: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+    1920: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    }
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -258,3 +331,36 @@ validation
      });
      myMap.geoObjects.add(placemark);
     }
+
+  let burger = document.querySelector('.burger')
+  let menu = document.querySelector('.header__nav')
+  let menuLinks = menu.querySelectorAll('.nav__link')
+  let menuBtn = document.querySelector('.header__btn')
+  let search = document.querySelector('.header__search');
+  let searchMobile = document.querySelector('.header__search-mobile')
+  // let inputSearch = document.querySelector('.header__search');
+
+  burger.addEventListener('click',
+    function () {
+      burger.classList.toggle('burger--active');
+      menu.classList.toggle('header__nav--active');
+      document.body.classList.toggle('stop-scroll');
+      menuBtn.classList.toggle('header__btn--active')
+  })
+
+menuLinks.forEach(function (el) {
+  el.addEventListener('click', function () {
+    burger.classList.remove('burger--active');
+    menu.classList.remove('.header__nav--active');
+    document.body.classList.remove('stop-scroll');
+  })
+
+
+  })
+
+  searchMobile.addEventListener('click',
+    function () {
+      searchMobile.classList.toggle('invisible');
+      search .classList.toggle('header__search--active');
+      document.body.classList.toggle('stop-scroll');
+    })
