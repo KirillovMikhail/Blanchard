@@ -122,10 +122,10 @@ const swiper = new Swiper('.gallery__swipper', {
     //   spaceBetween: 20
     // },
 
-    // 480: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 30
-    // },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 38,
+    },
 
     1024: {
       slidesPerView: 2,
@@ -185,10 +185,11 @@ const eventsSwiper = new Swiper('.events__swiper', {
     //   spaceBetween: 20
     // },
 
-    // 480: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 30
-    // },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
 
     1024: {
       spaceBetween: 27,
@@ -232,10 +233,10 @@ const projectsSwiper = new Swiper('.project__swiper', {
     //   spaceBetween: 20
     // },
 
-    // 480: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 30
-    // },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
 
     1024: {
       slidesPerView: 2,
@@ -342,7 +343,7 @@ validation
 
   burger.addEventListener('click',
     function () {
-      burger.classList.toggle('burger--active');
+      burger.classList.toggle('header__burger--active');
       menu.classList.toggle('header__nav--active');
       document.body.classList.toggle('stop-scroll');
       menuBtn.classList.toggle('header__btn--active')
@@ -350,7 +351,7 @@ validation
 
 menuLinks.forEach(function (el) {
   el.addEventListener('click', function () {
-    burger.classList.remove('burger--active');
+    burger.classList.remove('header__burger--active');
     menu.classList.remove('.header__nav--active');
     document.body.classList.remove('stop-scroll');
   })
@@ -363,4 +364,5 @@ menuLinks.forEach(function (el) {
       searchMobile.classList.toggle('invisible');
       search .classList.toggle('header__search--active');
       document.body.classList.toggle('stop-scroll');
+      burger.classList.toggle('header__burger--hidden');
     })
