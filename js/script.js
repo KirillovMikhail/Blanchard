@@ -117,10 +117,11 @@ const swiper = new Swiper('.gallery__swipper', {
 
   breakpoints: {
 
-    // 320: {
-    //   slidesPerView: 2,
-    //   spaceBetween: 20
-    // },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+
+    },
 
     768: {
       slidesPerView: 2,
@@ -180,10 +181,10 @@ const eventsSwiper = new Swiper('.events__swiper', {
 
   breakpoints: {
 
-    // 320: {
-    //   slidesPerView: 2,
-    //   spaceBetween: 20
-    // },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
 
     768: {
       slidesPerView: 2,
@@ -228,10 +229,10 @@ const projectsSwiper = new Swiper('.project__swiper', {
 
   breakpoints: {
 
-    // 320: {
-    //   slidesPerView: 2,
-    //   spaceBetween: 20
-    // },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
 
     768: {
       slidesPerView: 2,
