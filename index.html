@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -17,8 +17,7 @@
   <link rel="stylesheet" href="Choices-master/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,7 +25,7 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container flex">
-        <div class="burger header__burger flex" tabindex="1">
+        <div class="burger header__burger flex" tabindex="0">
           <div class="burger__line"></div>
           <div class="burger__line"></div>
           <div class="burger__line"></div>
@@ -183,22 +182,22 @@
               <option value="">Скульптура</option>
             </select>
           </label>
-          <label class="gallery__label" tabindex="1">
+          <label class="gallery__label" tabindex="0">
             <input class="gallery__input input" type="radio" name="filter">XIX век
             <span class="gallery__check input__check"></span>
           </label>
-          <label class="gallery__label" tabindex="1">
+          <label class="gallery__label" tabindex="0">
             <input class="gallery__input input" type="radio" checked name="filter">XX век
             <span class="gallery__check input__check"></span>
           </label>
-          <label class="gallery__label" tabindex="1">
+          <label class="gallery__label" tabindex="0">
             <input class="gallery__input input" type="radio" name="filter">Современность
             <span class="gallery__check input__check"></span>
           </label>
         </div>
         <div class="swiper gallery__swipper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide gallery__swiper-slide" tabindex="1">
+            <div class="swiper-slide gallery__swiper-slide" tabindex="0">
               <picture>
                 <source srcset="img/gallery-1-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/gallery-1-768.jpg" media="(max-width: 768px)">
@@ -206,7 +205,7 @@
                 <img class="gallery__painting" src="img/gallery-1.jpg" alt="Картина известного художника 1">
               </picture>
             </div>
-            <div class="swiper-slide gallery__swiper-slide swiper-slide--2" tabindex="1">
+            <div class="swiper-slide gallery__swiper-slide swiper-slide--2" tabindex="0">
               <picture>
                 <source srcset="img/gallery-2-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/gallery-2-768.jpg" media="(max-width: 768px)">
@@ -214,7 +213,7 @@
                 <img class="gallery__painting" src="img/gallery-2.jpg" alt="Картина известного художника 2">
               </picture>
             </div>
-            <div class="swiper-slide gallery__swiper-slide" tabindex="1">
+            <div class="swiper-slide gallery__swiper-slide" tabindex="0">
               <picture>
                 <source srcset="img/gallery-3-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/gallery-3-768.jpg" media="(max-width: 768px)">
@@ -268,19 +267,6 @@
             </svg>
           </div>
         </div>
-        <!-- <div class="modal flex">
-          <img src="img/galery-modal.jpg" alt="Женщина с граблями">
-          <article class="modal__article flex">
-            <h2 class="modal__name">Казимир Малевич</h2>
-            <h3 class="modal__picture">«Женщина с граблями»</h3>
-            <time class="modal__data">1931–1932</time>
-            <p class="modal__text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник
-              принялся за
-              её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской
-              выставок в
-              1927 году.</p>
-          </article>
-        </div> -->
       </div>
     </section>
     <section class="section catalog" id="catalog">
@@ -297,7 +283,7 @@
               <img class="catalog__picture" src="img/catalog-cards-1.jpg" alt="Доменико Гирландайо">
               <figcaption class="catalog__pic-dsc">Доменико Гирландайо</figcaption>
             </figure>
-            <time class="catalog__time">2 июня 1448–11 января 1494</time>
+            <span class="catalog__time">2 июня 1448–11 января 1494</span>
             <p class="catalog__cards-text">Один из ведущих флорентийских художников Кватроченто, основатель
               художественной
               династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
@@ -332,31 +318,30 @@
               </h2>
               <div class="ac-panel">
                 <ul class="catalog__ac-list list-reset ac-text">
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Бенедетто&nbsp;ди&nbsp;Биндо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Бергоньоне,&nbsp;Амброджо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Биссоло,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Больтраффио,&nbsp;Джованни</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Бонсиньори,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Боттичини,&nbsp;Рафаэлло</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Брамантино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Бреа,&nbsp;Людовико</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Бьяджо&nbsp;д’Антонио&nbsp;Туччи</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Веккьетта</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Андреа&nbsp;Верроккьо</li>
-                  <li class="catalog__ac-item" data-path="1-painter" tabindex="1">Доменико&nbsp;Гирландайо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Беноццо&nbsp;Гоццоли</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Граначчи,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Грегорио&nbsp;ди&nbsp;Чекко</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Джованни&nbsp;да&nbsp;Удине</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Джованни&nbsp;ди&nbsp;Паоло</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Джорджоне</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Парентино,&nbsp;Бернардо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Пезеллино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Пьетро&nbsp;Перуджино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Перуцци,&nbsp;Бальдассаре</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Пизанелло</li>
-                  <!-- <br> -->
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="1">Пинтуриккьо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бенедетто&nbsp;ди&nbsp;Биндо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бергоньоне,&nbsp;Амброджо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Биссоло,&nbsp;Франческо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Больтраффио,&nbsp;Джованни</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бонсиньори,&nbsp;Франческо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Боттичини,&nbsp;Рафаэлло</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Брамантино</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бреа,&nbsp;Людовико</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бьяджо&nbsp;д’Антонио&nbsp;Туччи</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Веккьетта</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Андреа&nbsp;Верроккьо</li>
+                  <li class="catalog__ac-item" data-path="1-painter" tabindex="0">Доменико&nbsp;Гирландайо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Беноццо&nbsp;Гоццоли</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Граначчи,&nbsp;Франческо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Грегорио&nbsp;ди&nbsp;Чекко</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джованни&nbsp;да&nbsp;Удине</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джованни&nbsp;ди&nbsp;Паоло</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джорджоне</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Парентино,&nbsp;Бернардо</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пезеллино</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пьетро&nbsp;Перуджино</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Перуцци,&nbsp;Бальдассаре</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пизанелло</li>
+                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пинтуриккьо</li>
                 </ul>
               </div>
             </div>
@@ -499,7 +484,7 @@
               <div class="events__picture events__picture--1"></div>
               <div class="events__dscr flex">
                 <h4 class="events__place">Музей им. Щусева</h4>
-                <time class="events__date">с 20 марта по 30 апреля</time>
+                <span class="events__date">с 20 марта по 30 апреля</span>
                 <article class="events__article">
                   <h3 class="events__header">Книжная гравюра в<span class="mobile-hidden"> живом</span> восприятии</h3>
                   <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель
@@ -512,7 +497,7 @@
               <div class="events__picture events__picture--2"></div>
               <div class="events__dscr flex">
                 <h4 class="events__place">ММОМА</h4>
-                <time class="events__date">24 марта 19:00</time>
+                <span class="events__date">24 марта 19:00</span>
                 <article class="events__article">
                   <h3 class="events__header">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                   <p class="events__text">Высокий уровень вовлечения представителей целевой аудитории является чётким
@@ -525,7 +510,7 @@
               <div class="events__picture events__picture--3"></div>
               <div class="events__dscr flex">
                 <h4 class="events__place">Еврейский музей</h4>
-                <time class="events__date">с 31 марта по 21 апреля</time>
+                <span class="events__date">с 31 марта по 21 апреля</span>
                 <article class="events__article">
                   <h3 class="events__header">Выставка «Формация 2020»</h3>
                   <p class="events__text">Идейные соображения высшего порядка, а также современная методология
@@ -538,7 +523,7 @@
               <div class="events__picture events__picture--4"></div>
               <div class="events__dscr flex">
                 <h4 class="events__place">ММАМ</h4>
-                <time class="events__date">с 8 апреля по 20 мая</time>
+                <span class="events__date">с 8 апреля по 20 мая</span>
                 <article class="events__article">
                   <h3 class="events__header">Джон Винзор. Фотографии из серии «Метафора»</h3>
                   <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель
@@ -551,7 +536,7 @@
               <div class="events__picture events__picture--5"></div>
               <div class="events__dscr flex">
                 <h4 class="events__place">Третьяковка на Крымском валу</h4>
-                <time class="events__date">с 30 марта по 30 апреля</time>
+                <span class="events__date">с 30 марта по 30 апреля</span>
                 <article class="events__article">
                   <h3 class="events__header">XXIV Международная биеннале молодого искусства</h3>
                   <p class="events__text">Внезапно, реплицированные с зарубежных источников, современные исследования
@@ -625,21 +610,21 @@
           предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
           призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными
           до степени совершённой неузнаваемости. Подробнее: <a href="#"
-            class="project__link">blanchard-art.ru<span class="project__link-page">/projects<span></a> <a href="#"
+            class="project__link">blanchard-art.ru<span class="project__link-page">/projects</span></a> <a href="#"
               class="project__link project__link--mobile">blanchard-art.ru/projects/about</a>
         </p>
         <h3 class="project__partners-header">Партнёры проектов:</h3>
         <div class="project__swiper swiper">
           <div class="swiper-wrapper project__wrapper">
-            <div class="swiper-slide project__slide project__slide--1" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--2" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--3" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--4" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--5" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--6" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--7" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--8" tabindex="1"></div>
-            <div class="swiper-slide project__slide project__slide--9" tabindex="1"></div>
+            <div class="swiper-slide project__slide project__slide--1" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--2" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--3" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--4" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--5" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--6" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--7" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--8" tabindex="0"></div>
+            <div class="swiper-slide project__slide project__slide--9" tabindex="0"></div>
           </div>
           <div class="swiper-button-prev project__swiper-button-prev">
             <svg class="project__btn" width="50" height="50" viewBox="0 0 30 30" fill="none"
@@ -683,7 +668,7 @@
         <div class="contacts__s-media flex">
           <h3 class="contacts__header contacts__header--media">Связаться в один клик</h3>
           <ul class="contacts__list list-reset flex">
-            <li class="contacts__item">
+            <li class="contacts__item" tabindex="0">
               <svg class="contacts__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -694,7 +679,7 @@
                   fill="white" />
               </svg>
             </li>
-            <li class="contacts__item" tabindex="1">
+            <li class="contacts__item" tabindex="0">
               <svg class="contacts__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
