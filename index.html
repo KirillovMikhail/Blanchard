@@ -12,12 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="icon" href="img/favicon.svg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="Choices-master/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="Choices-master/public/assets/styles/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,7 +25,7 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container flex">
-        <div class="burger header__burger flex" tabindex="0">
+        <div class="burger header__burger flex" tabindex="0" aria-label="Меню">
           <div class="burger__line"></div>
           <div class="burger__line"></div>
           <div class="burger__line"></div>
@@ -56,7 +56,7 @@
           </ul>
         </nav>
         <div class="header__search-mobile"></div>
-        <button class="header__btn btn-reset">
+        <button class="header__btn btn-reset" aria-label="Войти">
           <svg class="header__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -182,69 +182,80 @@
               <option value="">Скульптура</option>
             </select>
           </label>
-          <label class="gallery__label" tabindex="0">
-            <input class="gallery__input input" type="radio" name="filter">XIX век
+          <label class="gallery__label">
+            <input class="gallery__input input visually-hidden" type="radio" name="19 century">XIX век
             <span class="gallery__check input__check"></span>
           </label>
-          <label class="gallery__label" tabindex="0">
-            <input class="gallery__input input" type="radio" checked name="filter">XX век
+          <label class="gallery__label">
+            <input class="gallery__input input visually-hidden" type="radio" checked name="20 century">XX век
             <span class="gallery__check input__check"></span>
           </label>
-          <label class="gallery__label" tabindex="0">
-            <input class="gallery__input input" type="radio" name="filter">Современность
+          <label class="gallery__label">
+            <input class="gallery__input input visually-hidden" type="radio" name="current-time">Современность
             <span class="gallery__check input__check"></span>
           </label>
         </div>
         <div class="swiper gallery__swipper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide gallery__swiper-slide" tabindex="0">
-              <picture>
-                <source srcset="img/gallery-1-320.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-1-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-1-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-1.jpg" alt="Картина известного художника 1">
-              </picture>
+            <div class="swiper-slide gallery__swiper-slide">
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-1-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-1-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-1-1024.jpg" media="(max-width: 1024px)">
+                  <img  class="gallery__picture" src="img/gallery-1.jpg" alt="Картина известного художника 1">
+                </picture>
+              </a>
             </div>
-            <div class="swiper-slide gallery__swiper-slide swiper-slide--2" tabindex="0">
-              <picture>
-                <source srcset="img/gallery-2-320.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-2-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-2-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-2.jpg" alt="Картина известного художника 2">
-              </picture>
-            </div>
-            <div class="swiper-slide gallery__swiper-slide" tabindex="0">
-              <picture>
-                <source srcset="img/gallery-3-320.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-3-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-3-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-3.jpg" alt="Картина известного художника 3">
-              </picture>
+            <div class="swiper-slide gallery__swiper-slide swiper-slide--2">
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-2-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-2-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-2-1024.jpg" media="(max-width: 1024px)">
+                  <img  class="gallery__picture" src="img/gallery-2.jpg" alt="Картина известного художника 2">
+                </picture>
+              </a>
             </div>
             <div class="swiper-slide gallery__swiper-slide">
-              <picture>
-                <source srcset="img/gallery-4-320.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-4-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-4-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-4.jpg" alt="Картина известного художника 4">
-              </picture>
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-3-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-3-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-3-1024.jpg" media="(max-width: 1024px)">
+                  <img class="gallery__picture" src="img/gallery-3.jpg" alt="Картина известного художника 3">
+                </picture>
+              </a>
             </div>
             <div class="swiper-slide gallery__swiper-slide">
-              <picture>
-                <source srcset="img/gallery-5-320.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-5-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-5-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-5.jpg" alt="Картина известного художника 5">
-              </picture>
-
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-4-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-4-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-4-1024.jpg" media="(max-width: 1024px)">
+                  <img class="gallery__picture" src="img/gallery-4.jpg" alt="Картина известного художника 4">
+                </picture>
+              </a>
             </div>
             <div class="swiper-slide gallery__swiper-slide">
-              <picture>
-                <source srcset="img/gallery-6-768.jpg" media="(max-width: 320px)">
-                <source srcset="img/gallery-6-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-6-1024.jpg" media="(max-width: 1024px)">
-                <img class="gallery__painting" src="img/gallery-6.jpg" alt="Картина известного художника 6">
-              </picture>
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-5-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-5-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-5-1024.jpg" media="(max-width: 1024px)">
+                  <img class="gallery__picture" src="img/gallery-5.jpg" alt="Картина известного художника 5">
+                </picture>
+              </a>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide">
+              <a href="" class="gallery__swiper-slide-link">
+                <picture class="gallery__painting">
+                  <source srcset="img/gallery-6-768.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-6-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-6-1024.jpg" media="(max-width: 1024px)">
+                  <img class="gallery__picture" src="img/gallery-6.jpg" alt="Картина известного художника 6">
+                </picture>
+              </a>
             </div>
           </div>
           <div class="swiper-pagination gallery-swiper-pagination"></div>
@@ -297,164 +308,248 @@
               <figcaption class="catalog__pic-dsc">Что мы о нём знаем?</figcaption>
             </figure>
             <p class="catalog__cards-text">Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
-            <a href="#" class="catalog__link">В галерею</a>
+            <a href="#gallery" class="catalog__link">В галерею</a>
           </div>
           <div class="accordion-container catalog__right">
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger catalog__trigger">
-                  <h2 class="catalog__trigger-header">C 1400 по 1499 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger catalog__trigger"><span class="catalog__trigger-header">C 1400 по 1499 гг</span>
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
                 <ul class="catalog__ac-list list-reset ac-text">
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бенедетто&nbsp;ди&nbsp;Биндо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бергоньоне,&nbsp;Амброджо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Биссоло,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Больтраффио,&nbsp;Джованни</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бонсиньори,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Боттичини,&nbsp;Рафаэлло</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Брамантино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бреа,&nbsp;Людовико</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Бьяджо&nbsp;д’Антонио&nbsp;Туччи</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Веккьетта</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Андреа&nbsp;Верроккьо</li>
-                  <li class="catalog__ac-item" data-path="1-painter" tabindex="0">Доменико&nbsp;Гирландайо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Беноццо&nbsp;Гоццоли</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Граначчи,&nbsp;Франческо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Грегорио&nbsp;ди&nbsp;Чекко</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джованни&nbsp;да&nbsp;Удине</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джованни&nbsp;ди&nbsp;Паоло</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Джорджоне</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Парентино,&nbsp;Бернардо</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пезеллино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пьетро&nbsp;Перуджино</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Перуцци,&nbsp;Бальдассаре</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пизанелло</li>
-                  <li class="catalog__ac-item" data-path="2-painter" tabindex="0">Пинтуриккьо</li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Бенедетто&nbsp;ди&nbsp;Биндо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Бергоньоне,&nbsp;Амброджо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Биссоло,&nbsp;Франческо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Больтраффио,&nbsp;Джованни</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Бонсиньори,&nbsp;Франческо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Боттичини,&nbsp;Рафаэлло</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Брамантино</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Бреа,&nbsp;Людовико</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Бьяджо&nbsp;д’Антонио&nbsp;Туччи</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Веккьетта</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Андреа&nbsp;Верроккьо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="1-painter">Доменико&nbsp;Гирландайо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Беноццо&nbsp;Гоццоли</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Граначчи,&nbsp;Франческо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Грегорио&nbsp;ди&nbsp;Чекко</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Джованни&nbsp;да&nbsp;Удине</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Джованни&nbsp;ди&nbsp;Паоло</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Джорджоне</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Парентино,&nbsp;Бернардо</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Пезеллино</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Пьетро&nbsp;Перуджино</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Перуцци,&nbsp;Бальдассаре</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Пизанелло</button>
+                    </li>
+                  <li class="catalog__ac-item">
+                    <button class="catalog__btn btn-reset" data-path="2-painter">Пинтуриккьо</button>
+                    </li>
                 </ul>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 1500 по 1599 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 1500 по 1599 гг</span>
+                <!-- <h2 class="catalog__trigger-header">C 1500 по 1599 гг</h2> -->
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 1600 по 1699 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 1600 по 1699 гг</span>
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 1700 по 1799 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 1700 по 1799 гг</span>
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 1800 по 1899 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 1800 по 1899 гг</span>
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 1900 по 1999 гг</h2>
-                  <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      fill="" />
-                    <path
-                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
-                      stroke="" />
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
-                  </svg>
-                </button>
-              </h2>
+              <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 1900 по 1999 гг</span>
+                <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    fill="" />
+                  <path
+                    d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                    stroke="" />
+                  <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                </svg>
+              </button>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="ac">
-              <h2 class="ac-header">
-                <button type="button" class="ac-trigger">
-                  <h2 class="catalog__trigger-header">C 2000 г</h2>
+                <button type="button" class="ac-trigger"><span class="catalog__trigger-header">C 2000 г</span>
                   <svg class="catalog__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -466,9 +561,19 @@
                     <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
                   </svg>
                 </button>
-              </h2>
               <div class="ac-panel">
-                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="ac_wrapper">
+                  <div class="ac__empty-block-left">
+                    <div class="ac__empty-dorder">
+                      <div class="ac__empty-body"></div>
+                    </div>
+                  </div>
+                  <div class="ac__empty-block-right">
+                    <h2 class="ac__empty-header">Здесь пока пусто</h2>
+                    <p class="ac__empty-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="ac__empty-link" href="#gallery">В галерею</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -479,7 +584,7 @@
       <div class="container">
         <h2 class="section__header">События</h2>
         <div class="events__swiper swiper">
-          <div class="swiper-wrapper flex">
+          <div class="swiper-wrapper events__swipper-wrapper flex">
             <div class="swiper-slide events__slide flex">
               <div class="events__picture events__picture--1"></div>
               <div class="events__dscr flex">
@@ -616,15 +721,51 @@
         <h3 class="project__partners-header">Партнёры проектов:</h3>
         <div class="project__swiper swiper">
           <div class="swiper-wrapper project__wrapper">
-            <div class="swiper-slide project__slide project__slide--1" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--2" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--3" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--4" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--5" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--6" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--7" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--8" tabindex="0"></div>
-            <div class="swiper-slide project__slide project__slide--9" tabindex="0"></div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-1.jpg" alt="Логотип Freelans Faundation">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-2.jpg" alt="Institute for contempary art">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-3.jpg" alt="Workhaus">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-4.jpg" alt="1849">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-5.jpg" alt="Hiscox">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-6.jpg" alt="Camdem">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-7.jpg" alt="Stassen">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-8.jpg" alt="Watts gallery">
+              </a>
+            </div>
+            <div class="swiper-slide project__slide">
+              <a href="#" class="project__partners-link">
+                <img class="project__partners-logo" src="img/partners-color-9.jpg" alt="Esad">
+              </a>
+            </div>
           </div>
           <div class="swiper-button-prev project__swiper-button-prev">
             <svg class="project__btn" width="50" height="50" viewBox="0 0 30 30" fill="none"
@@ -668,7 +809,7 @@
         <div class="contacts__s-media flex">
           <h3 class="contacts__header contacts__header--media">Связаться в один клик</h3>
           <ul class="contacts__list list-reset flex">
-            <li class="contacts__item" tabindex="0">
+            <li class="contacts__item" tabindex="0" aria-label="Ватс апп">
               <svg class="contacts__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -679,7 +820,7 @@
                   fill="white" />
               </svg>
             </li>
-            <li class="contacts__item" tabindex="0">
+            <li class="contacts__item" tabindex="0" aria-label="Телеграмм">
               <svg class="contacts__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -704,7 +845,7 @@
       <div class="footer__s-media">
         <ul class="footer__list list-reset flex">
           <li class="footer__item">
-            <a class="footer__link" href="#" >
+            <a class="footer__link" href="#" aria-label="Вконтакте">
               <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -714,7 +855,7 @@
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#" >
+            <a class="footer__link" href="#" aria-label="Однокласники">
               <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -734,6 +875,7 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="Choices-master/public/assets/scripts/choices.min.js"></script>
   <script src="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.js"></script>
+  <script src="Inputmask-5.x/dist/inputmask.min.js"></script>
   <script>
     const validate = new window.JustValidate('#form');
   </script>

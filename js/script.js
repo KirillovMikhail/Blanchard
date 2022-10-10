@@ -23,6 +23,21 @@ headerItemInside.forEach(function(el) {
 })
 });
 
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
 const swiperHero = new Swiper('.hero__swipper', {
   direction: 'horizontal',
   loop: true,
@@ -70,6 +85,7 @@ const swiper = new Swiper('.gallery__swipper', {
     1024: {
       slidesPerView: 2,
       spaceBetween: 34,
+      slidesPerGroup: 2,
     },
 
     1200: {
@@ -96,7 +112,7 @@ new Accordion('.accordion-container', {
 
 let galerySlider = document.querySelector('.swiper-slide--2');
 let galeryModal = document.querySelector('.modal');
-let tabsBtn = document.querySelectorAll('.catalog__ac-item');
+let tabsBtn = document.querySelectorAll('.catalog__btn');
 let tabsItem = document.querySelectorAll('.catalog__cards');
 tabsBtn.forEach(function(element){
     element.addEventListener('click', function(e) {
@@ -170,7 +186,7 @@ const projectsSwiper = new Swiper('.project__swiper', {
   direction: 'horizontal',
   watchSlidesProgress: true,
   slidesPerGroup: 1,
-  loop: true,
+  loop: false,
 
   breakpoints: {
 
@@ -181,12 +197,13 @@ const projectsSwiper = new Swiper('.project__swiper', {
 
     768: {
       slidesPerView: 2,
-      spaceBetween: 34
+      spaceBetween: 34,
     },
 
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      spaceBetween: 50,
     },
 
     1920: {
@@ -201,6 +218,10 @@ const projectsSwiper = new Swiper('.project__swiper', {
   },
 
 });
+
+var selector = document.getElementById("tel");
+var im = new Inputmask("+7 (999)-999-99-99");
+im.mask(selector);
 
 const validation = new JustValidate('#form');
 
@@ -228,22 +249,11 @@ validation
   ])
   .addField('#tel', [
     {
-      rule: 'required',
+      validator() {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
+      },
       errorMessage: 'Введите телефон',
-    },
-    {
-      rule: 'number',
-      errorMessage: 'Недопустимый формат',
-    },
-    {
-      rule: 'minLength',
-      value: 10,
-      errorMessage: 'Номер слишком короткий',
-    },
-    {
-      rule: 'maxLength',
-      value: 11,
-      errorMessage: 'Номер слишком длиный',
     },
   ]);
 
